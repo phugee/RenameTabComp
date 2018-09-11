@@ -1,5 +1,5 @@
 <aura:documentation>
-	<aura:description>Documentation</aura:description>
+	<aura:description>Lightning Component to update a tab for a record page within a Console app.</aura:description>
 	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
 		Example Description
 	</aura:example>
