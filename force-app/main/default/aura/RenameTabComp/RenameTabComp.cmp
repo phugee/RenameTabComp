@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId, force:hasSObjectName" access="global">
+    <aura:attribute name="recordData" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+
+    <aura:attribute name="selectedField" type="string" default="Id" access="global" required="true"/>
+
+    <lightning:workspaceAPI aura:id="workspace" />
+    <force:recordData aura:id="recordData" 
+        recordId="{!v.recordId}"
+        targetFields="{!v.recordData}" 
+        targetError="{!v.error}"
+        layoutType="FULL" />
+
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+</aura:component>
