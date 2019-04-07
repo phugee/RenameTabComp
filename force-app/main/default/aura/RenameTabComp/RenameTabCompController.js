@@ -1,12 +1,12 @@
-({
-    onRender: function (component, event, helper) {
+({  
+    handleRecordUpdated: function (component, event, helper) {
         var workspaceAPI = component.find("workspace");
         workspaceAPI.isConsoleNavigation().then(function (result) {
             if (result) {
                 workspaceAPI.getFocusedTabInfo().then(function (result) {
                     var record = component.get("v.recordData");
                     var selectedField = component.get("v.selectedField");
-                    
+
                     workspaceAPI.setTabLabel(
                         { 
                             tabId: result.tabId, 
